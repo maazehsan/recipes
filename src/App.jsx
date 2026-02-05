@@ -777,7 +777,7 @@ function Header() {
         <nav className="header__nav">
           <span className="header__tagline">Curated Recipes</span>
           <a 
-            href="https://instagram.com" 
+            href="https://instagram.com/hadianoorzz" 
             target="_blank" 
             rel="noopener noreferrer"
             className="header__social"
@@ -841,49 +841,51 @@ function SearchFilterBar({
       </div>
       
       <div className={`filters__groups ${filtersOpen ? 'filters__groups--open' : ''}`}>
-        <div className="filters__group">
-          <label className="filters__label">Category</label>
-          <div className="filters__options">
-            {allTags.map(tag => (
-              <button
-                key={tag}
-                className={`filters__btn ${activeTag === tag ? 'filters__btn--active' : ''}`}
-                onClick={() => setActiveTag(tag)}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
-        </div>
-        
-        <div className="filters__row">
-          <div className="filters__group filters__group--small">
-            <label className="filters__label">Cuisine</label>
+        <div className="filters__groups-inner">
+          <div className="filters__group">
+            <label className="filters__label">Category</label>
             <div className="filters__options">
-              {cuisines.map(cuisine => (
+              {allTags.map(tag => (
                 <button
-                  key={cuisine}
-                  className={`filters__btn ${activeCuisine === cuisine ? 'filters__btn--active' : ''}`}
-                  onClick={() => setActiveCuisine(cuisine)}
+                  key={tag}
+                  className={`filters__btn ${activeTag === tag ? 'filters__btn--active' : ''}`}
+                  onClick={() => setActiveTag(tag)}
                 >
-                  {cuisine}
+                  {tag}
                 </button>
               ))}
             </div>
           </div>
           
-          <div className="filters__group filters__group--small">
-            <label className="filters__label">Difficulty</label>
-            <div className="filters__options">
-              {difficulties.map(diff => (
-                <button
-                  key={diff}
-                  className={`filters__btn ${activeDifficulty === diff ? 'filters__btn--active' : ''}`}
-                  onClick={() => setActiveDifficulty(diff)}
-                >
-                  {diff}
-                </button>
-              ))}
+          <div className="filters__row">
+            <div className="filters__group filters__group--small">
+              <label className="filters__label">Cuisine</label>
+              <div className="filters__options">
+                {cuisines.map(cuisine => (
+                  <button
+                    key={cuisine}
+                    className={`filters__btn ${activeCuisine === cuisine ? 'filters__btn--active' : ''}`}
+                    onClick={() => setActiveCuisine(cuisine)}
+                  >
+                    {cuisine}
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            <div className="filters__group filters__group--small">
+              <label className="filters__label">Difficulty</label>
+              <div className="filters__options">
+                {difficulties.map(diff => (
+                  <button
+                    key={diff}
+                    className={`filters__btn ${activeDifficulty === diff ? 'filters__btn--active' : ''}`}
+                    onClick={() => setActiveDifficulty(diff)}
+                  >
+                    {diff}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -1060,6 +1062,16 @@ function RecipeModal({ recipe, onClose }) {
               </ol>
             </section>
           </div>
+          
+          <a 
+            href="" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="modal__reel-btn"
+          >
+            {Icons.instagram}
+            <span>Watch Recipe Reel</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1077,13 +1089,13 @@ function Footer() {
         </div>
         <div className="footer__links">
           <a 
-            href="https://instagram.com" 
+            href="https://instagram.com/hadianoorzz" 
             target="_blank" 
             rel="noopener noreferrer"
             className="footer__social"
           >
             {Icons.instagram}
-            <span>@hadianoor</span>
+            <span>@hadianoorzz</span>
           </a>
         </div>
       </div>
