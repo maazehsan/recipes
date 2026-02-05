@@ -1077,7 +1077,7 @@ function App() {
             <span className="hero-minimal__line hero-minimal__line--accent">Recipe Collection</span>
           </h1>
           <p className="hero-minimal__subtitle">
-            Many handcrafted recipes celebrating South Asian and Continental cuisine
+          My handcrafted South Asian and Continental cuisine recipes
           </p>
         </div>
         
